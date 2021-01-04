@@ -6,10 +6,11 @@ common.mode = 'development'
 
 module.exports = merge(common, {
     devServer: {
-        port: 3000,
+        port: 8080,
         contentBase: common.output.path
     },
     plugins: [
+        // css代码单独提取
         new MiniCssExtractPlugin({
             filename: '[name].css', // 合并的文件名
             chunkFilename: '[id].css' // 分块的文件名

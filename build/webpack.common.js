@@ -33,7 +33,6 @@ module.exports = function () {
             alias: {
                 // 路径别名
                 '@': SRC_PATH,
-
                 style: path.resolve(SRC_PATH, 'style'),
                 component: path.resolve(SRC_PATH, 'component'),
                 image: path.resolve(PUBLIC_PATH, 'image')

@@ -9,9 +9,11 @@
 
 -   `@babel/core babel` 核心库
 -   `@babel/preset-env` 提供 babel 的基本环境（一站式）
+-   `babel-loader` 用来转译 js 文件，但是对于 jsx/tsx/ts 等文件，需要做一些预处理，babel-loader 本身只识别 js 文件，在 babel-loader 运行时，会去读取.babelrc 或者 babel.config.json,在其中配置的 preset 则是用来预处理的包
 -   `@babel/preset-react` 转译 jsx 语法
 -   `@babel/preset-typescript` 转译 typescript
--   `babel-loader` 用来转译 js 文件，但是对于 jsx/tsx/ts 等文件，需要做一些预处理，babel-loader 本身只识别 js 文件，在 babel-loader 运行时，会去读取.babelrc 或者 babel.config.json,在其中配置的 preset 则是用来预处理的包
+-   `@babel/plugin-proposal-class-properties` 转换静态类属性以及使用属性初始值设定项语法声明的属性
+-
 
 ### 关于 css
 
@@ -32,3 +34,8 @@
 
 -   方案一：使用`url-loader`或者`file-loader`
 -   方案二：使用`copy-webpack-plugin` 直接将静态资源 copy 到 dist 文件夹
+
+### 关于 TypeScript
+
+-   需引入 `@types`系列包 其中包含了 ts 对于基础接口的定义 如对 react 组件中 setState 的定义
+-   添加`tsconfig.json` TS 编译器在编译 TS 文件的时候都会先在项目根目录的 tsconfig.json 文件，根据该文件的配置进行编译

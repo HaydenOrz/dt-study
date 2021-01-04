@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "noEmit": true, // 编译后不生成任何文件，让babel可以继续处理
+        "module": "commonjs", // 生成代码模板标准
+        "target": "es5", // 目标语言版本
+        "lib": [
+            "es6",
+            "es2016",
+            "dom"
+        ], // ts需要引的库
+        "allowJs": true,
+        "jsx": "react",
+        "removeComments": true, // 删除注释
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "paths": { // 路径映射
+            "@/*": [
+                "./src/*"
+            ],
+            "styles/*": [
+                "./src/styles/*"
+            ],
+            "components/*": [
+                "./src/components/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/public/**/*"
+    ],
+    "include": [
+        "./**/*.ts",
+        "./**/*.tsx",
+        "src/**/*"
+    ]
+}
