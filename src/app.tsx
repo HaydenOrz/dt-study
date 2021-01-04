@@ -1,16 +1,14 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 import '@/styles/reset.css'
 import '@/styles/index.scss'
 
-import Header from '@/components/header'
-import Main from '@/components/main'
+import Login from '@/views/login'
 
 ReactDOM.render(
     <React.StrictMode>
-        <Header />
-        <Main />
+        <Login />
     </React.StrictMode>,
     document.getElementById('app')
 )

@@ -11,6 +11,7 @@
         "allowJs": true,
         "jsx": "react",
         "removeComments": true, // 删除注释
+        "esModuleInterop": true, // 允许使用es6 模块化规范
         "typeRoots": [
             "node_modules/@types"
         ],
@@ -19,10 +20,19 @@
                 "./src/*"
             ],
             "styles/*": [
-                "./src/style/*"
+                "./src/styles/*"
             ],
             "components/*": [
                 "./src/components/*"
+            ],
+            "views/*": [
+                "./src/views/*"
+            ],
+            "api/*": [
+                "./src/api/*"
+            ],
+            "utils/*": [
+                "./src/utils/*"
             ],
             "consts/*": [
                 "./src/consts/*"

@@ -34,8 +34,10 @@ module.exports = function () {
                 // 路径别名
                 '@': SRC_PATH,
                 style: path.resolve(SRC_PATH, 'styles'),
-                component: path.resolve(SRC_PATH, 'components'),
-                image: path.resolve(PUBLIC_PATH, 'images')
+                components: path.resolve(SRC_PATH, 'components'),
+                utils: path.resolve(SRC_PATH, 'utils'),
+                consts: path.resolve(SRC_PATH, 'consts'),
+                public: path.resolve(SRC_PATH, 'public')
             }
         },
         plugins: [
