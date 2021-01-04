@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 
-class Header extends Component {
-    render() {
+class Header extends React.Component {
+    render () {
         const arr = [1, 3, 3, 33, 3]
         return (
             <>
-                <img src="public/image/test_img1.jpeg" />
+                <img src="public/images/test_img1.jpeg" />
                 <p>This Is My Blog ! ! !</p>
             </>
         )

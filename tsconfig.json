@@ -19,10 +19,13 @@
                 "./src/*"
             ],
             "styles/*": [
-                "./src/styles/*"
+                "./src/style/*"
             ],
             "components/*": [
                 "./src/components/*"
+            ],
+            "consts/*": [
+                "./src/consts/*"
             ]
         }
     },

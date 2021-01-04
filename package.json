@@ -7,7 +7,7 @@
   "scripts": {
     "start": "webpack-dev-server --config build/webpack.dev.js ",
     "build": "webpack --config build/webpack.dev.js ",
-    "lint-fix": "npx eslint './src/**/*.ts' './src/**/*.tsx' './src/**/*.js' './src/**/*.jsx' --fix"
+    "lint-fix": "npx eslint './src/**/*.ts' './src/**/*.tsx' --fix"
   },
   "dependencies": {
     "@types/react": "16.9.51",

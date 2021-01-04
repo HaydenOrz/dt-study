@@ -50,9 +50,24 @@
             1,
             "single"
         ],
-        "quote-props": [ // 属性使用双引号
+        "quote-props": [ // 对象字面量属性使用双引号
             1,
             "always"
+        ],
+        "arrow-body-style": [ // 箭头函数当大括号是可以省略的，强制不使用
+            1,
+            "as-needed"
+        ],
+        "arrow-parens": [ // 箭头函数在可以省略括号的地方强制不使用括号
+            1,
+            "as-needed"
+        ],
+        "arrow-spacing": [ // 箭头函数在箭头前后使用空格
+            1,
+            {
+                "before": true,
+                "after": true
+            }
         ]
     }
 }

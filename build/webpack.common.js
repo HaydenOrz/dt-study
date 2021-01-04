@@ -8,7 +8,7 @@ const { SRC_PATH, DIST_PATH, ROOT_PATH, PUBLIC_PATH } = require('./const')
 module.exports = function () {
     return {
         entry: {
-            app: path.resolve(SRC_PATH, 'app.js')
+            app: path.resolve(SRC_PATH, 'app.tsx')
         },
         output: {
             path: DIST_PATH,
@@ -33,9 +33,9 @@ module.exports = function () {
             alias: {
                 // 路径别名
                 '@': SRC_PATH,
-                style: path.resolve(SRC_PATH, 'style'),
-                component: path.resolve(SRC_PATH, 'component'),
-                image: path.resolve(PUBLIC_PATH, 'image')
+                style: path.resolve(SRC_PATH, 'styles'),
+                component: path.resolve(SRC_PATH, 'components'),
+                image: path.resolve(PUBLIC_PATH, 'images')
             }
         },
         plugins: [

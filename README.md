@@ -1,3 +1,9 @@
+### TODO
+
+-   设置 git 钩子
+-   提升构建速度 happypack
+-   完善 webpack 配置
+
 ### 关于 webpack
 
 -   `html-webpack-plugin` 打包 HTML 文件,可配置引入入口文件（默认引入 entry）
