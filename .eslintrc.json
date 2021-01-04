@@ -1,0 +1,58 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "plugin:react/recommended",
+        "standard"
+    ],
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "rules": {
+        // 0: close  1: warning  2: error 
+        "no-console": 1, // 禁止使用console
+        "no-dupe-args": 2, // 禁止对象重复属性
+        "no-dupe-keys": 2, // 禁止函数重复的参数
+        "no-unreachable": 2, // 禁止不可达代码
+        "no-trailing-spaces": 1, // 禁用行尾空格
+        "no-unused-vars": 1, // 禁止出现未使用过的变量
+        "no-use-before-define": 2, //禁止在变量定义之前使用它们
+        "no-extra-parens": 2, // 禁止非必要的括号
+        "no-extra-semi": 2, // 禁止非必要的冒号
+        "indent": [ // 缩进
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "key-spacing": [ // 对象字面量冒号前后空格
+            1,
+            {
+                "beforeColon": false,
+                "afterColon": true
+            }
+        ],
+        "quotes": [ //使用单引号
+            1,
+            "single"
+        ],
+        "quote-props": [ // 属性使用双引号
+            1,
+            "always"
+        ]
+    }
+}

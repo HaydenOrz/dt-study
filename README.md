@@ -3,7 +3,7 @@
 -   `html-webpack-plugin` 打包 HTML 文件,可配置引入入口文件（默认引入 entry）
 -   `webpack-merge` webpack 配置文件分离合并
 -   `webpack.SourceMapDevToolPlugin` 配置 sourceMap
-    — `copy-webpack-plugin` 直接复制静态资源
+-   `copy-webpack-plugin` 直接复制静态资源
 
 ### 关于 babel
 
@@ -24,7 +24,7 @@
 
 ##### 注意：
 
--   在使用 `MiniCssExtractPlugin` 时一直打包失败，报错信息为：
+-   在使用 `MiniCssExtractPlugin` 时一直打包失败，不同版本的报错信息分别为：
     `MiniCssExtractPlugin@v0`: <font color="red">TypeError: Cannot read property 'split' of undefined</font>
     `MiniCssExtractPlugin@v1` : <font color="red">TypeError: compilation.getAssets is not a function or its return value is not iterable</font>
 
@@ -37,5 +37,12 @@
 
 ### 关于 TypeScript
 
--   需引入 `@types`系列包 其中包含了 ts 对于基础接口的定义 如对 react 组件中 setState 的定义
+-   安装`@types`系列包 其中包含了 ts 对于基础接口的定义 如对 react 组件中 setState 的定义
 -   添加`tsconfig.json` TS 编译器在编译 TS 文件的时候都会先在项目根目录的 tsconfig.json 文件，根据该文件的配置进行编译
+-   安装`@typescript-eslint`系列包 typescript eslint 语法检验相关包
+
+### 关于 eslint
+
+-   `eslint` eslint 核心包
+-   `eslint-plugin`系列包 eslint 对于 react、typescript、node 环境等的插件
+-   添加`.eslintrc`文件 ，在其中配置

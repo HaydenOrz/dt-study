@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/pfmao/.nvm/versions/node/v14.15.0/bin/node /usr/local/Cellar/yarn/1.22.5/libexec/bin/yarn.js add copy-webpack-plugin -D
+  /Users/pfmao/.nvm/versions/node/v14.15.0/bin/node /usr/local/Cellar/yarn/1.22.5/libexec/bin/yarn.js add eslint -D
 
 PATH: 
   /Users/pfmao/.avn/bin:/Users/pfmao/.nvm/versions/node/v14.15.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/pfmao/.avn/bin:/Users/pfmao/.nvm/versions/node/v14.15.0/bin
@@ -14,10 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/copy-webpack-plugin: ETIMEDOUT
-      at Timeout._onTimeout (/usr/local/Cellar/yarn/1.22.5/libexec/lib/cli.js:141409:19)
-      at listOnTimeout (internal/timers.js:554:17)
-      at processTimers (internal/timers.js:497:7)
+  Error: ENOENT: no such file or directory, copyfile '/Users/pfmao/Library/Caches/Yarn/v6/npm-ansi-styles-2.2.1-b432dd3358b634cf75e1e4664368240533c1ddbe-integrity/node_modules/ansi-styles/package.json' -> '/Users/pfmao/Desktop/test/dt-study/node_modules/node-sass/node_modules/ansi-styles/package.json'
 
 npm manifest: 
   {
@@ -31,21 +28,26 @@ npm manifest:
       "build": "webpack --config build/webpack.dev.js "
     },
     "dependencies": {
-      "react": "^17.0.1",
-      "react-dom": "^17.0.1"
+      "@types/react": "16.9.51",
+      "@types/react-dom": "16.9.0",
+      "react": "^16.13.0",
+      "react-dom": "^16.13.0"
     },
     "devDependencies": {
       "@babel/core": "^7.7.0",
+      "@babel/plugin-proposal-class-properties": "^7.12.1",
       "@babel/preset-env": "^7.3.4",
       "@babel/preset-react": "^7.0.0",
       "@babel/preset-typescript": "^7.3.3",
       "babel-loader": "^8.0.4",
       "clean-webpack-plugin": "^3.0.0",
+      "copy-webpack-plugin": "^5.0.3",
       "css-loader": "^3.1.0",
       "file-loader": "^6.2.0",
       "html-webpack-plugin": "^4.5.0",
       "mini-css-extract-plugin": "^0.4.1",
-      "sass-loader": "^10.1.0",
+      "node-sass": "^4.14.1",
+      "sass-loader": "^7.0.1",
       "style-loader": "^2.0.0",
       "url-loader": "^1.0.1",
       "webpack": "4.32.0",

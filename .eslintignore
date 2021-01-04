@@ -1,0 +1,6 @@
+dist/
+node_modules/
+npm-error.log
+build
+package-lock.json
+src/public/

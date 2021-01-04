@@ -1,26 +1,28 @@
-import { type } from 'os';
-import * as React from 'react';
-import { Component } from 'react';
+import * as React from 'react'
+import { Component } from 'react'
 
-const InitState=  {
-    title: '',
-    total: 0
+const InitState = {
+    'title': '',
+    'total': 0
 }
 
 type IState = typeof InitState
 
-class Main extends Component<any,IState> { 
+class Main extends Component<any, IState> {
     state:IState = {
-        title: 'hello world',
-        total: 2,
+        'title': 'hello world',
+        'total': 2
     }
+
     incrementTotal = () => {
         const { total } = this.state
         this.setState({
-            total:total+1
+            'total': total + 1
         })
+        console.log('this is console')
     }
-    render() {
+
+    render () {
         return (
             <>
                 <p>{this.state.title}</p>
