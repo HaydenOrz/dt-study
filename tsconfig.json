@@ -4,6 +4,7 @@
         "module": "commonjs", // 生成代码模板标准
         "target": "es5", // 目标语言版本
         "lib": [
+            "es5",
             "es6",
             "es2016",
             "dom"

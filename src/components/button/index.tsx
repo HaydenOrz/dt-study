@@ -1,8 +1,8 @@
-import React, { Component, MouseEvent } from 'react'
+import React from 'react'
 
 interface IProps{
     text?: string,
-    onClick?: (event: MouseEvent) => void
+    onClick?: (event: React.MouseEvent) => void
 }
 
 function Button (props: IProps) {

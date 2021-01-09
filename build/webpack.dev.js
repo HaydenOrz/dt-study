@@ -6,10 +6,17 @@ common.mode = 'development'
 
 module.exports = merge(common, {
     devServer: {
-        hot: true,
-        open: true,
-        port: 8080,
-        contentBase: common.output.path
+        hot: true, // 开启模块热替换
+        open: true, // 自动在浏览器打开
+        port: 8080, // 端口号
+        quiet: true,
+        noInfo: true,
+        stats: {
+            colors: true,
+            "errors-only": false,
+            cached: true
+        },
+        contentBase: common.output.path,
     },
     plugins: [
         // css代码单独提取
