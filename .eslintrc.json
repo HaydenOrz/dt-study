@@ -31,7 +31,6 @@
         "no-unused-vars": 1, // 禁止出现未使用过的变量
         "no-use-before-define": 2, //禁止在变量定义之前使用它们
         "no-extra-parens": 2, // 禁止非必要的括号
-        "no-extra-semi": 2, // 禁止非必要的冒号
         "indent": [ // 缩进
             2,
             4,

@@ -33,11 +33,13 @@ module.exports = function () {
             alias: {
                 // 路径别名
                 '@': SRC_PATH,
-                'style': path.resolve(SRC_PATH, 'styles'),
+                'style': path.resolve(SRC_PATH, 'style'),
                 'components': path.resolve(SRC_PATH, 'components'),
                 'utils': path.resolve(SRC_PATH, 'utils'),
                 'consts': path.resolve(SRC_PATH, 'consts'),
-                'public': path.resolve(SRC_PATH, 'public')
+                'public': path.resolve(SRC_PATH, 'public'),
+                'views': path.resolve(SRC_PATH, 'views'),
+                'api': path.resolve(SRC_PATH, 'api')
             }
         },
         plugins: [

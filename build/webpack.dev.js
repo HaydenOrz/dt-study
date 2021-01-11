@@ -9,12 +9,17 @@ module.exports = merge(common, {
         hot: true, // 开启模块热替换
         open: true, // 自动在浏览器打开
         port: 8080, // 端口号
-        quiet: true,
-        noInfo: true,
+        // quiet: true,
+        // noInfo: true,
         stats: {
             colors: true,
             "errors-only": false,
             cached: true
+        },
+        proxy:{
+            '/api/v1':{
+                target: 'http://192.168.0.108'
+            }
         },
         contentBase: common.output.path,
     },

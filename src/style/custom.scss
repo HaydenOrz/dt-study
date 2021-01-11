@@ -1,0 +1,7 @@
+$prefix: 'fz';
+
+@function prefix($name) {
+    @return '.' + $prefix + '-' + $name;
+}
+
+// ==========basic component==========s
