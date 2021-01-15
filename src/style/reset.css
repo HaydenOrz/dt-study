@@ -4,6 +4,7 @@
 
 html {
     line-height: 1.15;
+    color: #3c3c3c;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -91,6 +92,7 @@ textarea {
 button,
 input {
     overflow: visible;
+    outline: none;
 }
 
 button,

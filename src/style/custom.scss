@@ -4,4 +4,16 @@ $prefix: 'fz';
     @return '.' + $prefix + '-' + $name;
 }
 
-// ==========basic component==========s
+// ==========color ===========
+$gray1: #FAFAFA; // 背景色
+$gray2: #E8E8E8; // 分割线
+$gray3: #DDDDDD; // 边框
+$black1: #3c3c3c; // 文字颜色
+$black2: #BFBFBF; // 禁用颜色
+$highlight: #5C99FF; // 高亮
+
+// ==========basic component==========
+$input: prefix('input');
+
+// ========== login ===========
+$loginForm: prefix('loginForm');

@@ -4,3 +4,4 @@ npm-error.log
 build
 package-lock.json
 src/public/
+src/server/

@@ -7,11 +7,11 @@ import { APP_PREFIX } from '@/consts'
  * @param name Default class name
  * @param prefix The prefix of class name you want to append
  */
-export function prefixClaName (name: string, prefix: string = APP_PREFIX) {
+export function prefixClaName(name: string, prefix: string = APP_PREFIX) {
     return name ? `${prefix}-${name}` : ''
 }
 
-export function classNames (...args) {
+export function classNames(...args) {
     if (isEmpty(args)) return
     const classList: string[] = []
     for (const arg of args) {
@@ -41,7 +41,7 @@ export function classNames (...args) {
  * @param block
  * @param element
  */
-export function getBEMElement (block: string, element: string) {
+export function getBEMElement(block: string, element: string) {
     return `${block}__${element}`
 }
 
@@ -52,6 +52,6 @@ export function getBEMElement (block: string, element: string) {
  * @param blockOrElement
  * @param modifier
  */
-export function getBEMModifier (blockOrElement: string, modifier: string) {
+export function getBEMModifier(blockOrElement: string, modifier: string) {
     return `${blockOrElement}--${modifier}`
 }

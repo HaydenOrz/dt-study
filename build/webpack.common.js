@@ -1,7 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+// 本机性能原因不开启happypack
 
 const { SRC_PATH, DIST_PATH, ROOT_PATH, PUBLIC_PATH } = require('./const')
 
@@ -14,13 +16,25 @@ module.exports = function () {
             path: DIST_PATH,
             filename: 'bundle.js'
         },
+        optimization: {
+            splitChunks: {
+                chunks: 'all',
+                automaticNameDelimiter: '~',
+                minSize: 20000,
+                maxSize: 0,
+                minChunks: 1
+            },
+            // runtimeChunk: {
+            //     name: 'runtime'
+            // }
+        },
         module: {
             rules: [
                 {
                     test: /\.[tj]sx?$/,
                     include: [SRC_PATH],
                     exclude: [path.resolve(ROOT_PATH, 'node_modules')],
-                    use: [{ loader: 'babel-loader' }]
+                    use: [{ loader: 'babel-loader' }],
                 },
                 {
                     test: /\.(jpg|jpeg|png|gif)$/,
@@ -43,7 +57,6 @@ module.exports = function () {
             }
         },
         plugins: [
-            new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
                 template: `${PUBLIC_PATH}/index.html`
             }),
@@ -53,7 +66,11 @@ module.exports = function () {
                     to: path.resolve(DIST_PATH, 'public'),
                     ignore: ['index.html']
                 }
-            ])
+            ]),
+            new MiniCssExtractPlugin({
+                filename: '[name].css', // 合并的文件名
+                chunkFilename: '[id].css' // 分块的文件名
+            })
         ]
     }
 }

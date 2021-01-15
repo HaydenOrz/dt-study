@@ -31,6 +31,7 @@
         "no-unused-vars": 1, // 禁止出现未使用过的变量
         "no-use-before-define": 2, //禁止在变量定义之前使用它们
         "no-extra-parens": 2, // 禁止非必要的括号
+        "space-before-function-paren": ["error", "never"],  // 函数括号前面的空格
         "indent": [ // 缩进
             2,
             4,
@@ -50,7 +51,7 @@
             "single"
         ],
         "quote-props": [ // 对象字面量属性使用双引号
-            1,
+            0,
             "always"
         ],
         "arrow-body-style": [ // 箭头函数当大括号是可以省略的，强制不使用

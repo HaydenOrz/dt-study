@@ -1,25 +1,5 @@
 @import 'style/custom.scss';
 
-#{$loginForm} {
-    box-shadow: 0 0 1px 1px $gray3;
-    width: 400px;
-    padding: 20px;
-    margin: 200px auto;
-    &__errorMsg{
-        width: 100%;
-        font-size: 12px;
-        margin: 0 15px;
-        padding: 5px 0;
-        color: red;
-    }
-    &__title{
-        width: 100%;
-        padding: 0 15px 20px 15px;
-        margin: 0;
-        font-size: 18px;
-    }
-}
-
 input {
     width: calc( 100% - 30px);
     height: 40px;
@@ -36,7 +16,6 @@ input {
 }
 
 input[type='submit'] {
-    cursor: pointer;
     background-color: #3F87FF;
     color: #fff;
     text-indent: 0;
