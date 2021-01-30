@@ -5,6 +5,7 @@
         "@babel/preset-typescript"
     ],
     "plugins": [
+        ["import", { "libraryName": "antd", "style": true }],
         "@babel/plugin-proposal-class-properties",
         "@babel/plugin-transform-runtime"
     ]

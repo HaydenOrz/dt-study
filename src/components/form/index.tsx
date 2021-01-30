@@ -12,6 +12,11 @@ type IFormState = typeof initState
 
 class Form extends React.Component<React.FormHTMLAttributes<HTMLFormElement>, IFormState> {
     state: IFormState = initState
+
+    UNSAFE_componentWillReceiveProps(pre, cur) {
+        console.log(pre, cur)
+    }
+
     render() {
         const { className, children, ...restProps } = this.props
         console.log(children)

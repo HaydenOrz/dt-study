@@ -41,6 +41,7 @@ module.exports = merge(common, {
             {
                 test: /\.css$/,
                 use: [
+                    'css-hot-loader',
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
@@ -53,6 +54,7 @@ module.exports = merge(common, {
             {
                 test: /\.scss$/,
                 use: [
+                    'css-hot-loader',
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
@@ -62,13 +64,34 @@ module.exports = merge(common, {
                     {
                         loader: 'css-loader',
                         options: {
-                            sourceMap: true
                         }
                     },
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: true
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    'css-hot-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '/dist/' // css中引入资源的公共路径
+                        }
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                        }
+                    },
+                    {
+                        loader: 'less-loader',
+                        options: {
+                            javascriptEnabled: true
                         }
                     }
                 ]

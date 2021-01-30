@@ -23,7 +23,6 @@ class Login extends React.Component<any, IState> {
         const { formData } = this.state
         const res = await API.login(formData)
         if (res?.code === 0) {
-            console.log('sads')
             this.setState({
                 allowLogin: false,
                 errorMsg: res.message

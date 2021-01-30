@@ -7,7 +7,7 @@ import Login from '@/views/login'
 import Test from '@/views/testComponent'
 ReactDOM.render(
     <React.StrictMode>
-        <Login/>
+        <Test/>
     </React.StrictMode>,
     document.getElementById('app')
 )
