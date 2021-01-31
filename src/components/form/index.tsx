@@ -6,10 +6,9 @@ import './index.scss'
 
 const preFormClaName = prefixClaName('form')
 const initState = {
-    data: {}
+    data: {},
 }
 type IFormState = typeof initState
-
 class Form extends React.Component<React.FormHTMLAttributes<HTMLFormElement>, IFormState> {
     state: IFormState = initState
 
