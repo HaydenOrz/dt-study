@@ -1,7 +1,6 @@
 import * as React from 'react'
-import { useState } from 'react'
 
-import { classNames, prefixClaName, getBEMModifier } from 'utils/className'
+import { classNames, prefixClaName } from 'utils/className'
 import './index.scss'
 
 const preInputClaName = prefixClaName('input')

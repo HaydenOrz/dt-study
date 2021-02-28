@@ -54,10 +54,10 @@
             0,
             "always"
         ],
-        "arrow-body-style": [ // 箭头函数当大括号是可以省略的，强制不使用
-            1,
-            "as-needed"
-        ],
+        // "arrow-body-style": [ // 箭头函数当大括号是可以省略的，强制不使用
+        //     1,
+        //     "as-needed"
+        // ],
         "arrow-parens": [ // 箭头函数在可以省略括号的地方强制不使用括号
             1,
             "as-needed"
@@ -68,6 +68,58 @@
                 "before": true,
                 "after": true
             }
-        ]
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "vars": "all",
+                "args": "none",
+                "ignoreRestSiblings": false
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "optionalDependencies": false,
+                "peerDependencies": false
+            }
+        ],
+        "react/display-name": [
+            0
+        ],
+        "react/sort-comp": 0,
+        "react/jsx-uses-react": 1,
+        "react/prefer-stateless-function": 0,
+        "react/jsx-closing-bracket-location": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "react/prop-types": [
+            0,
+            {
+                "ignore": [
+                    "children"
+                ]
+            }
+        ],
+        "react/jsx-no-target-blank": 2,
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".tsx",
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/react-in-jsx-scope": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/explicit-member-accessibility": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/no-use-before-define": 0,
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/interface-name-prefix": 0,
+        "@typescript-eslint/no-empty-interface": 0,
+        "camelcase": 0,
+        "@typescript-eslint/camelcase": 0
     }
 }
