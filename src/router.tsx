@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from 'react'
 import { Route } from 'react-router-dom'
 import PageLoading from '@/components/pageLoading'
 import Main from '@/views'
+// import Home from '@/views/home'
+// import Login from '@/views/login'
 /**
  *  在路由组件外包裹一层Suspense
  */

@@ -34,7 +34,12 @@ module.exports = function () {
                     test: /\.[tj]sx?$/,
                     include: [SRC_PATH],
                     exclude: [path.resolve(ROOT_PATH, 'node_modules')],
-                    use: [{ loader: 'babel-loader' }],
+                    use: [{ 
+                        loader: 'babel-loader',
+                        options: {
+                            "plugins": ["dynamic-import-webpack"]
+                        }
+                    }],
                 },
                 {
                     test: /\.(jpg|jpeg|png|gif)$/,
