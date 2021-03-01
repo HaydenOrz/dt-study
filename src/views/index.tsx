@@ -1,20 +1,21 @@
 import React, { Component } from 'react'
+import { renderRoutes } from 'react-router-config'
 
 import Header from '@/views/layout/header'
 
 interface IProps {
-    children?: React.ReactNode
+    children?: React.ReactNode,
+    route?: any
 }
 interface IState {}
 
 class Main extends Component<IProps, IState> {
     render() {
-        console.log(this.props.children)
-        console.log("++++++props+++++")
+        console.log("++++++render Main+++++")
         return (
             <>
                 <Header/>
-                {this.props.children}
+                {renderRoutes(this.props.route.routes)}
             </>
         )
     }

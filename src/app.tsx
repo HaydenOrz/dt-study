@@ -1,19 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { HashRouter } from 'react-router-dom'
-import * as router from 'react-router'
+import { renderRoutes } from 'react-router-config'
 import '@/style/index.scss'
-
 // import Login from '@/views/login'
 // import Test from '@/views/testComponent'
-import initRoutes from './router'
+import routes from './router'
+
+// ReactDOM.render(
+//     <HashRouter>
+//         {routes}
+//     </HashRouter>,
+//     document.getElementById('app')
+// )
 
 ReactDOM.render(
-    <React.StrictMode>
-        <HashRouter routes={initRoutes()}>
-        </HashRouter>
-    </React.StrictMode>,
+    <HashRouter>
+        {renderRoutes(routes)}
+    </HashRouter>,
     document.getElementById('app')
 )
-
-console.log(router)

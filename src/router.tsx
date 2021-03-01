@@ -1,8 +1,13 @@
+/**
+ * @description 使用react-router-config实现路由集中化管理
+ * 问题: 1. react-router-dom 原生嵌套路由父路由无法渲染
+ * 问题: 2. react-router-dom 原生实现默认路由
+ */
+
 import React, { lazy, Suspense } from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import PageLoading from '@/components/pageLoading'
 import Main from '@/views'
-import Header from '@/views/layout/header'
 
 // import Home from '@/views/home'
 // import Login from '@/views/login'
@@ -30,31 +35,58 @@ const Part2 = wrapperSuspense(
 
 // export default (
 //     <Main>
-//         <Redirect path='/' to='/home'/>
+//         {/* <Redirect path='/' to='/home'/> */}
 //         <Route path='/home' component={Home} />
 //         <Route path='/login' component={Login}/>
 //     </Main>
 // )
+
 // export default (
 //     <Route path='/' component={Main}>
 //         <Route path='/home' component={Home} />
 //         <Route path='/login' component={Login}/>
 //     </Route>
 // )
-const initRoutes = () => {
-    return {
+
+/**
+ * @param exact 精确匹配
+ */
+export default [
+    {
         path: '/',
-        component: Main
-        // childRoutes: [
-        //     {
-        //         path: 'home',
-        //         component: Home
-        //     },
-        //     {
-        //         path: 'login',
-        //         component: Login
-        //     }
-        // ]
+        component: Main,
+        routes: [
+            {
+                path: '/',
+                exact: true,
+                render: () => <Redirect to='/home'/>
+            },
+            {
+                path: '/home',
+                component: Home,
+                routes: [
+                    {
+                        path: '/home',
+                        exact: true,
+                        render: () => <Redirect to='/home/part1'/>
+                    },
+                    {
+                        path: '/home/part1',
+                        exact: true,
+                        component: Part1
+                    },
+                    {
+                        path: '/home/part2',
+                        exact: true,
+                        component: Part2
+                    }
+                ]
+            },
+            {
+                path: '/login',
+                exact: true,
+                component: Login
+            }
+        ]
     }
-}
-export default initRoutes
+]
