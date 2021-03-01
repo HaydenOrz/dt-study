@@ -1,7 +1,9 @@
 import React, { lazy, Suspense } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import PageLoading from '@/components/pageLoading'
 import Main from '@/views'
+import Header from '@/views/layout/header'
+
 // import Home from '@/views/home'
 // import Login from '@/views/login'
 /**
@@ -19,11 +21,40 @@ const Home = wrapperSuspense(
 const Login = wrapperSuspense(
     lazy(() => import('@/views/login'))
 )
-
-export default (
-    <Route path='/' component={Main}>
-        <Route path='/home' component={Home}/>
-        <Route path='/login' component={Login}/>
-        <Route path='/*' component={Home}/>
-    </Route>
+const Part1 = wrapperSuspense(
+    lazy(() => import('@/views/home/part1'))
 )
+const Part2 = wrapperSuspense(
+    lazy(() => import('@/views/home/part2'))
+)
+
+// export default (
+//     <Main>
+//         <Redirect path='/' to='/home'/>
+//         <Route path='/home' component={Home} />
+//         <Route path='/login' component={Login}/>
+//     </Main>
+// )
+// export default (
+//     <Route path='/' component={Main}>
+//         <Route path='/home' component={Home} />
+//         <Route path='/login' component={Login}/>
+//     </Route>
+// )
+const initRoutes = () => {
+    return {
+        path: '/',
+        component: Main
+        // childRoutes: [
+        //     {
+        //         path: 'home',
+        //         component: Home
+        //     },
+        //     {
+        //         path: 'login',
+        //         component: Login
+        //     }
+        // ]
+    }
+}
+export default initRoutes
