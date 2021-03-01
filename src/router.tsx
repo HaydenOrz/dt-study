@@ -9,8 +9,6 @@ import { Redirect } from 'react-router-dom'
 import PageLoading from '@/components/pageLoading'
 import Main from '@/views'
 
-// import Home from '@/views/home'
-// import Login from '@/views/login'
 /**
  *  在路由组件外包裹一层Suspense
  */
@@ -32,21 +30,6 @@ const Part1 = wrapperSuspense(
 const Part2 = wrapperSuspense(
     lazy(() => import('@/views/home/part2'))
 )
-
-// export default (
-//     <Main>
-//         {/* <Redirect path='/' to='/home'/> */}
-//         <Route path='/home' component={Home} />
-//         <Route path='/login' component={Login}/>
-//     </Main>
-// )
-
-// export default (
-//     <Route path='/' component={Main}>
-//         <Route path='/home' component={Home} />
-//         <Route path='/login' component={Login}/>
-//     </Route>
-// )
 
 /**
  * @param exact 精确匹配
