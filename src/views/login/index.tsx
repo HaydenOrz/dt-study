@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { prefixClaName, getBEMElement } from 'utils/className'
 import API from '@/api'
 import { checkLoginData } from '@/utils'
@@ -17,9 +18,9 @@ const initState = {
 }
 type IState = typeof initState
 class Login extends React.Component<any, IState> {
-    state:IState = initState
+    state: IState = initState
 
-    login = async() => {
+    login = async () => {
         const { formData } = this.state
         const res = await API.login(formData)
         if (res?.code === 0) {
@@ -30,7 +31,7 @@ class Login extends React.Component<any, IState> {
         }
     }
 
-    handleClick= e => {
+    handleClick = e => {
         e.preventDefault()
         const { formData } = this.state
         const { allowLogin, errorMsg } = checkLoginData(formData)
@@ -42,7 +43,7 @@ class Login extends React.Component<any, IState> {
         this.login()
     }
 
-    handleFormChange= e => {
+    handleFormChange = e => {
         const { name, value } = e.target
         const { formData } = this.state
         const newFormData = {
@@ -57,11 +58,12 @@ class Login extends React.Component<any, IState> {
 
     render() {
         const { allowLogin, errorMsg } = this.state
+        console.log(this.props)
         return (
             <>
                 <form
-                    className = {logFormClaName}
-                    onChange={this.handleFormChange} 
+                    className={logFormClaName}
+                    onChange={this.handleFormChange}
                 >
                     <p className={formTitleClaName}>账号密码登录</p>
                     <input
@@ -89,4 +91,12 @@ class Login extends React.Component<any, IState> {
     }
 }
 
-export default Login
+const mapStateToProps = state => {
+    console.log('++++state+++++')
+    console.log(state)
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps)(Login)

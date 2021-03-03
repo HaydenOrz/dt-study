@@ -4,26 +4,22 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@types/lodash": "^4.14.168",
-    "@types/react": "16.9.51",
-    "@types/react-dom": "16.9.0",
-    "@types/react-redux": "^7.1.16",
-    "@types/react-router-redux": "^5.0.18",
     "antd": "3.26.13",
     "lodash": "^4.17.20",
-    "mirror-creator": "^1.1.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-hot-loader": "^4.13.0",
     "react-redux": "^7.2.2",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.0",
     "react-router-redux": "^4.0.8",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "webpack-dev-server --config build/webpack.dev.js ",
     "build": "webpack --config build/webpack.prod.js ",
-    "lint-fix": "npx eslint './src/**/*.ts' './src/**/*.tsx' --fix"
+    "lint-fix": " npx eslint --ext .ts,.tsx,.js,.jsx src/ --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.7.0",
@@ -32,7 +28,14 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@types/lodash": "^4.14.168",
+    "@types/react": "16.9.51",
+    "@types/react-dom": "16.9.0",
+    "@types/react-hot-loader": "^4.1.1",
+    "@types/react-redux": "^7.1.16",
     "@types/react-router-dom": "^5.1.7",
+    "@types/react-router-redux": "^5.0.18",
+    "@types/redux-thunk": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "2.14.0",
     "babel-loader": "^8.0.4",

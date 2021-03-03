@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 // 本机性能原因不开启happypack
+// issues： 在babel.config.js里面设置dynamic-import不生效
 
 const { SRC_PATH, DIST_PATH, ROOT_PATH, PUBLIC_PATH } = require('./const')
 

@@ -31,7 +31,14 @@
         "no-unused-vars": 1, // 禁止出现未使用过的变量
         "no-use-before-define": 2, //禁止在变量定义之前使用它们
         "no-extra-parens": 2, // 禁止非必要的括号
-        "space-before-function-paren": ["error", "never"],  // 函数括号前面的空格
+        "space-before-function-paren": [
+            "error",
+            {
+                "anonymous": "always",
+                "named": "always",
+                "asyncArrow": "always"
+            }
+        ], // 函数括号前面的空格
         "indent": [ // 缩进
             2,
             4,

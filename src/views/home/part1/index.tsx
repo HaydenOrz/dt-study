@@ -6,7 +6,7 @@ class Part1 extends React.Component {
         value: ''
     }
 
-    render() {
+    render () {
         // const dataSource = ['Jack', 'Tom', 'apple', 'banana']
         return (
             <>

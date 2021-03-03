@@ -8,7 +8,7 @@ class Test extends React.Component<any, any> {
         value: ''
     }
 
-    render() {
+    render () {
         // const dataSource = ['Jack', 'Tom', 'apple', 'banana']
         return (
             <>

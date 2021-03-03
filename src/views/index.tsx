@@ -10,8 +10,8 @@ interface IProps {
 interface IState {}
 
 class Main extends Component<IProps, IState> {
-    render() {
-        console.log("++++++render Main+++++")
+    render () {
+        console.log('++++++render Main+++++')
         return (
             <>
                 <Header/>

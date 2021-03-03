@@ -27,3 +27,16 @@ export const checkLoginData = data => {
     }
     return result
 }
+
+/**
+ * @description 模块化actionTypes
+ * @param prefix 前缀
+ * @param actionTypes actionTypes
+ */
+export const createActionTypes: any = (prefix: string, actionTypes: string[]) => {
+    const result = {}
+    actionTypes?.map(type => {
+        result[type] = prefix + type
+    })
+    return result
+}
