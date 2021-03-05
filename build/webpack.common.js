@@ -10,10 +10,10 @@ const { SRC_PATH, DIST_PATH, ROOT_PATH, PUBLIC_PATH } = require('./const')
 
 module.exports = function () {
     return {
-        entry: {
+        entry: { // 入口
             app: path.resolve(SRC_PATH, 'app.tsx')
         },
-        output: {
+        output: { // 出口
             path: DIST_PATH,
             filename: 'bundle.js'
         },
