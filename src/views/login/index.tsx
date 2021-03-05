@@ -56,7 +56,7 @@ class Login extends React.Component<any, IState> {
         })
     }
 
-    render() {
+    render () {
         const { allowLogin, errorMsg } = this.state
         console.log(this.props)
         return (

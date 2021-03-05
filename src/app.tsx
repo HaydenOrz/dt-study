@@ -1,18 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { HashRouter } from 'react-router-dom'
-import { renderRoutes } from 'react-router-config'
-import { Provider } from 'react-redux'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
 import store from '@/store'
-import '@/style/index.scss'
-import routes from './router'
+import Root from './root'
 
-ReactDOM.render(
-    <Provider store={store}>
-        <HashRouter>
-            {renderRoutes(routes)}
-        </HashRouter>
-    </Provider>
-    ,
-    document.getElementById('app')
-)
+const render = (Component: any) => {
+    ReactDOM.render(
+        <AppContainer>
+            <Component store={store}/>
+        </AppContainer>
+        , document.getElementById('app')
+    )
+}
+
+render(Root)
+
+if ((module as any).hot) {
+    (module as any).hot.accept(['./root'], () => {
+        const newRoot = require('./root').default
+        render(newRoot)
+    })
+}

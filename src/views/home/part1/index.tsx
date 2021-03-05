@@ -10,7 +10,7 @@ class Part1 extends React.Component {
         // const dataSource = ['Jack', 'Tom', 'apple', 'banana']
         return (
             <>
-                <p>part1</p>
+                <p>part1dasdadsa</p>
             </>
         )
     }
